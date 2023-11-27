@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active{
+    transform: scale(1);
+    
+}
+.bgactive{
+    opacity: 100;
+    pointer-events: auto;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <section class="relative font-sans w-[100vw] h-[100vh] bg-black
+    overflow-hidden  flex justify-center items-center ">
+    <!-- circle 1 -->
+      <div class="c1 absolute w-[13em] h-[13em] left-[30%] top-[5%] rounded-full  shadow-4xl
+      bg-gradient-to-t from-[#d84869] to-[#f46641]
+      "></div>  
+    <!-- circle 2 -->
+     <div class="c2 absolute w-[19em] h-[19em] right-[30%] bottom-[5%] rounded-full shadow-3xl
+      bg-gradient-to-t from-[#5648d8] to-[#8641f4]"></div> 
+       
+       <!-- main box  -->
+       <div class="flex flex-col justify-evenly absolute bg-[#ffffff1a] py-[30px] px-[50px]
+       items-center rounded-xl border-[2px] border-[#ffffff30] h-[450px]
+       backdrop-blur-md ">
+        <img src="./Untitled_450.png" alt=""
+        class="w-[150p] h-[150px] rounded-full">
+        <h2 class="text-white font-semibold text-[2rem] mt-5">Afrin Qureshi</h2>
+        <p class="text-[#ffffff85] font-semibold text-lg">Student , Code Help</p>
+        <div class="flex gap-[10px] mt-4">
+            <button class="flex justify-center items-center gap-[7px] border-[2px] rounded-[4px] py-[9px] px-[12px]
+             text-[#ffffffb9] text-xs cursor-pointer border-[#ffffffb9]
+             hover:text-[#131313] hover:bg-[#ffffffb9] transition-all duration-200"
+             onclick="openModal()">
+                <i class="fa-solid fa-share"></i>
+                Share My Profile
+            </button>
+            <button class="flex justify-center items-center gap-[7px] border-[2px] rounded-[4px] py-[9px] px-[12px]
+            text-[#ffffffb9] text-xs border-[#ffffffb9] w-[150px] cursor-pointer
+            hover:text-[#131313] hover:bg-[#ffffffb9] transition-all duration-200">
+                Follow Me
+            </button>
+        </div>
+      </div>    
+      
+      <!-- modal component  -->
+      <div  class="modal w-[540px] bg-[#00000088] flex flex-col text-white py-[20px] px-[25px]
+        rounded-2xl border-2 border-[#ffffff59] absolute z-[100]
+         justify-center backdrop-blur-md scale-0 transition-all duration-500">
+            <!-- 1 -->
+           <div class="flex justify-between text-[30px] border-b-2 border-[#ffffff59] mb-[20px] pb-[12px] items-center
+           font-bold">
+            <h1 >Share My Profile</h1>
+            <i onclick="closeModal()" class=" fa-solid fa-xmark close cursor-pointer"></i>
+           </div> 
+           <!-- 2 -->
+           <p class="font-semibold text-[18px] mb-4">Share this via</p>
+           <!-- 3 -->
+           <div class="flex justify-between mb-[20px]">
+            <a href="#" class="border-2 rounded-full p-8 text-[#1771e6] border-[#1771e6]
+            w-[30px] h-[30px] my-[10px] text-[27px] flex justify-center items-center
+            hover:text-white hover:bg-[#1771e6] transition-all duration-200">
+                <i class="fa-brands fa-facebook-f
+              "></i>
+            </a>
+            <a href=""
+            class="border-2 rounded-full p-8 text-[#1c99e6] border-[#1c99e6]
+            w-[30px] h-[30px] my-[10px] text-[27px] flex justify-center items-center
+            hover:text-white hover:bg-[#1c99e6] transition-all duration-200">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href=""
+            class="border-2 rounded-full p-8 text-[#cb2770] border-[#cb2770]
+            w-[30px] h-[30px] my-[10px] text-[27px] flex justify-center items-center
+            hover:text-white hover:bg-[#cb2770] transition-all duration-200">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href=""
+            class="border-2 rounded-full p-8 text-[#2fe664] border-[#2fe664]
+            w-[30px] h-[30px] my-[10px] text-[27px] flex justify-center items-center
+            hover:text-white hover:bg-[#2fe664] transition-all duration-200">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href=""
+            class="border-2 rounded-full p-8 text-[#0081c2] border-[#0081c2]
+            w-[30px] h-[30px] my-[10px] text-[27px] flex justify-center items-center
+            hover:text-white hover:bg-[#0081c2] transition-all duration-500">
+                <i class="fa-brands fa-telegram"></i>
+            </a>
+           </div>
+        </div>
+
+      <!-- modal component bg  -->
+      <div onclick="closeModal()" class="modalbg pointer-events-none w-[100vw] h-[100vh] bg-[#5f5f5f83] opacity-0
+      transition-all duration-500"></div>
+    </section>
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <script src="js.js"></script>
+</body>
+</html>
