@@ -19,6 +19,7 @@ let checkCount=0;
 handleSlider()
 const symbol="`~!@#$%^&*()-_=+[]{}\|;:',./?><"
 //set circle color to gray
+setIndicator('#ccc')
 
 //functions
 
@@ -30,8 +31,9 @@ function handleSlider(){
 }
 
 function setIndicator(color){
+
     indicator.style.backgroundColor=color; 
-    indicator.style.boxShadow="3px 3px color"; 
+    indicator.style.boxShadow=`0px 0px 12px 1px ${color}`; 
 }
 
 function getRndInteger(min,max){
@@ -136,7 +138,7 @@ copyBtn.addEventListener('click',()=>{
 generateBtn.addEventListener('click',()=>{
     //none of the checkbox selected
     if(checkCount<=0){
-        alert('no box checked');
+        alert('no boxes checked');
     }  
     if(passwordlength < checkCount){
         passwordlength=checkCount
@@ -180,20 +182,20 @@ generateBtn.addEventListener('click',()=>{
     for(let i=0;i<funArray.length;i++){
        password+=funArray[i]() 
     }
-    console.log('cumpulsary addition')
+
 
     //remaning addition
     for(let i=funArray.length; i<passwordlength; i++){
         let rndIndex=getRndInteger(0,funArray.length)
-        console.log("randIndex" + rndIndex);
+        // console.log("randIndex" + rndIndex);
         password+=funArray[rndIndex]();
     }
-    console.log('remaning')
+
 
     //shuffle the password
     password=shufflePassword()
     passwordDisplay.value=password
-    console.log('shuffulinf')
+
 
     //clculate strength
     calculateStrength()
