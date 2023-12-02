@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Password Generator</title>
     <link
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap"
       rel="stylesheet"
@@ -18,7 +18,7 @@
         <div class="display-container">
             <input readonly placeholder="PASSWORD" class="display" data-passwordDisplay>
             <button data-copy>
-                <span data-copyMsg></span>
+                <span data-copyMsg class="spanmsg"></span>
                 <img src="./assets/copy.svg" alt="Copy" 
                 width="23" height="23"></img>
             </button>
@@ -36,19 +36,19 @@
            class="slider" step="1" data-lengthSlider>
 
            <!-- checkbox -->
-           <div>
+           <div class="check">
             <input type="checkbox" id="uppercase" checked>
             <label for="uppercase"> Includes Uppercase letters</label>
            </div>
-           <div>
+           <div class="check">
             <input type="checkbox" id="lowercase">
             <label for="lowercase"> Includes Lowercase letters</label>
            </div>
-           <div>
+           <div class="check">
             <input type="checkbox" id="numbers">
             <label for="numbers"> Includes Numbers</label>
            </div>
-           <div>
+           <div class="check">
             <input type="checkbox" id="symbols">
             <label for="symbols">  Includes Symbols</label>
            </div>

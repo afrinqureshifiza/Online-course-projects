@@ -15,7 +15,7 @@ const allCheckbox=document.querySelectorAll("input[type=checkbox]")
 //initialise variable
 let password="";
 let passwordlength=10;
-let checkCount=0;
+let checkCount=1;
 handleSlider()
 const symbol="`~!@#$%^&*()-_=+[]{}\|;:',./?><"
 //set circle color to gray
@@ -24,10 +24,13 @@ setIndicator('#ccc')
 //functions
 
 //set password length
-function handleSlider(){
-    inputSlider.value=passwordlength;   
-    lengthDisplay.innerText=passwordlength;
-    //aage karna h
+function handleSlider() {
+    inputSlider.value = passwordlength;
+    lengthDisplay.innerText = passwordlength;
+    //or kuch bhi karna chahiye ? - HW
+    const min = inputSlider.min;
+    const max = inputSlider.max;
+    inputSlider.style.backgroundSize = ( (passwordlength - min)*100/(max - min)) + "% 100%"
 }
 
 function setIndicator(color){
