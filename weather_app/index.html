@@ -7,7 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    Hello ji
+    <section class="wrapper">
+
+        <h1>Weather App</h1>
+        <div class="tab-container">
+            <div class="tab" data-userWeather>Your Weather</div>
+            <div class="tab" data-searchWeather>Search Weather</div >
+        </div>
+
+        <div class="weather-container">
+
+            <!-- grant location  -->
+            <div class="grant-location-cointainer">
+                <img src="./assets/location.png" width="80" height="80" alt="" loading="lazy">
+                <p>Grant Location Access</p>
+                <p>Allow Access to get weather Information</p>
+                <button class="btn" data-grantAccess>
+                    Grant Access
+                </button>
+            </div>
+        </div>
+
+    </section>
     
     <script src="js.js"></script>
 </body>

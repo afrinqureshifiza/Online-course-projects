@@ -28,3 +28,20 @@ async function getWeatherDetails(){
 
     
 }
+
+function getLocation(){
+  if(navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(showPos)
+  }
+  else{
+    console.log('doesnt support geolocation')
+  }
+}
+
+function showPos(position){
+  let lat = position.coords.latitude;
+  let longi = position.coords.longitude;
+
+  console.log(lat)
+  console.log(lon)
+}
